@@ -2,7 +2,7 @@
     export default {}
 </script>
 <template>
-    <P>Form</P>
+    <P>List</P>
 </template>
 <style scoped>
 </style>

@@ -1,8 +1,5 @@
 <script>
-import {  
-  dom,
-  event,
-  openURL,
+import {
   QLayout,
   QToolbar,
   QToolbarTitle,
@@ -15,7 +12,8 @@ import {
   QItemMain
 } from 'quasar'
 
-import TgForm from './components/expenses/form.vue'
+import TgForm from './expenses/form.vue'
+import TgList from './expenses/list.vue'
 
 // const 
 
@@ -23,6 +21,7 @@ export default {
   name: 'index',
   components: {
     TgForm,
+    TgList,
     QLayout,
     QToolbar,
     QToolbarTitle,
@@ -34,7 +33,7 @@ export default {
     QItemSide,
     QItemMain
   },
-  data() {
+  data () {
     return {
 
     }
@@ -45,12 +44,8 @@ export default {
   methods: {
 
   },
-  mounted() {
-
-  },
-  beforeDestroy() {
-
-  }
+  mounted () {},
+  beforeDestroy () {}
 }
 </script>
 
@@ -76,6 +71,7 @@ export default {
 
     <div class="container">
       <tg-form></tg-form>
+      <tg-list></tg-list>
     </div>
 
     <div slot="left">
