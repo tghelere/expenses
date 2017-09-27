@@ -64,8 +64,7 @@ export default {
       </q-btn>
 
       <q-toolbar-title>
-        Despesas em dinheiro
-        <div slot="subtitle">Running on Quasar v{{$q.version}}</div>
+        Despesas em dinheiro        
       </q-toolbar-title>
     </q-toolbar>
 
