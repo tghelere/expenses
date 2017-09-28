@@ -14,6 +14,7 @@ import {
 
 import TgForm from './expenses/form.vue'
 import TgList from './expenses/list.vue'
+import {getExpenses} from '../persistence'
 
 // const 
 
@@ -44,7 +45,9 @@ export default {
   methods: {
 
   },
-  mounted () {},
+  mounted () {
+    this.$store.commit('SET_EXPENSES', getExpenses())
+  },
   beforeDestroy () {}
 }
 </script>

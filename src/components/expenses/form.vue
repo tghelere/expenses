@@ -1,5 +1,5 @@
 <script>
-    import {QBtn, QInput, QCard, QCardMain, QCardTitle} from 'quasar'
+    import {QBtn, QInput, QCard, QCardMain, QCardTitle, uid} from 'quasar'
 
     import moment from 'moment'
     
@@ -8,15 +8,18 @@
         data () {
             return {
                 expense: {
+                    id: '',
                     amount: '',
                     description: '',
-                    date: moment().format('DD/MM/YYYY')
+                    date: moment().format('DD/MM/YYYY'),
+                    done: false
                 }
             }
         },
         methods: {
             submit () {
                 const cloned = JSON.parse(JSON.stringify(this.expense))
+                cloned.id = uid()
                 this.$store.commit('ADD_EXPENSE', cloned)
                 this.reset()
             },
